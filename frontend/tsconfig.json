@@ -5,6 +5,9 @@
   "compilerOptions": {
     "strict": true,
     "noImplicitOverride": true,
+    "paths": {
+      "ims-lib": ["./dist/ims-lib"]
+    },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -28,6 +31,12 @@
     },
     {
       "path": "./projects/ims-app/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ims-lib/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ims-lib/tsconfig.spec.json"
     }
   ]
 }

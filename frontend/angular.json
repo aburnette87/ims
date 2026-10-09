@@ -72,6 +72,32 @@
           "builder": "@angular/build:unit-test"
         }
       }
+    },
+    "ims-lib": {
+      "projectType": "library",
+      "root": "projects/ims-lib",
+      "sourceRoot": "projects/ims-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ims-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ims-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/ims-lib/tsconfig.spec.json"
+          }
+        }
+      }
     }
   }
 }
