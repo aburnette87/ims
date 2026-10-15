@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'ims-login',
-  imports: [],
+  imports: [FormsModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent {}
+export class LoginComponent {
+  username: string = '';
+  password: string = '';
+
+  onSubmit(): void {
+    console.log('Login submitted');
+  }
+}

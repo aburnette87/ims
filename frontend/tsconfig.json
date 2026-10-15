@@ -3,11 +3,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strict": true,
-    "noImplicitOverride": true,
-    "paths": {
-      "ims-lib": ["./dist/ims-lib"]
-    },
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -16,7 +14,13 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "paths": {
+      "@ims/components": ["projects/ims-lib/src/lib/components"],
+      "@ims/components/*": ["projects/ims-lib/src/lib/components/*"],
+      "@ims/lib": ["./dist/ims-lib"],
+      "@ims/lib/*": ["./dist/ims-lib/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
